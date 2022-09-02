@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>love calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background: url("bg.jpg") center center/cover no-repeat; */
+        background-color: #2d3436;
+      }
+      #container {
+        background-color: #0984e3;
+        /* border: 2px solid rgb(165, 151, 24); */
+        width: 600px;
+        height: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-shadow: 2px 2px 20px 5px rgba(255, 255, 255, 0.5);
+      }
+
+      input {
+        border-radius: 10px;
+        outline: none;
+        text-indent: 10px;
+        border: none;
+        font-size: 16px;
+        box-shadow: 2px 2px 20px 5px rgba(255, 255, 255, 0.5);
+      }
+
+      #in {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+        
+      }
+      #in input {
+        height: 30px;
+        width: 200px;
+      }
+
+      button {
+        width: 300px;
+        margin: 0px auto;
+        height: 30px;
+        border-radius: 6px;
+        background-color: #d63031;
+        color: white;
+        border: none;
+        box-shadow: 2px 2px 20px 5px rgba(255, 255, 255, 0.5);
+      }
+
+      #result {
+        height: 30px;
+        width: 150px;
+        margin: 0px auto;
+        text-align: center;
+      }
+
+      h1 {
+        color: white;
+        padding: 20px 0px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 10px white;
+      }
+
+      @media (max-width: 650px) {
+        #container{
+          width:450px;
+        }
+      }
+      @media (max-width: 450px) {
+        #container{
+          width:300px;
+        }
+        #in {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 100px;
+          
+        }
+
+        button{
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Love Calculator</h1>
+      <div id="container">
+        <div id="in">
+          <input id="name" type="text" placeholder="Your Name" />
+          <input id="lname" type="text" placeholder="Your Love Name" />
+        </div>
+        <button onclick="generate()">Check</button>
+        <input id="result" type="text" readonly />
+      </div>
+    </div>
+
+    <script>
+      function generate() {
+        let name = document.getElementById("name").value;
+        let lname = document.getElementById("lname").value;
+        if (name == "") {
+          alert("Please Enter Your Name");
+
+        } else if (!isNaN(name)) {
+          alert("You entered a number please enter name");
+
+        } else if (name.length < 3) {
+          alert("Name is too short try other name");
+        } 
+        
+        if (lname == "") {
+          alert("Please enter your Love name");
+
+        } else if (!isNaN(lname)) {
+          alert("You entered a number please enter Love name");
+
+        } else if (lname.length < 3) {
+          alert("Love name is too short try other name");
+        } 
+
+        else {
+          let value = Math.random() * 100;
+          value = Math.floor(value);
+          document.getElementById("result").value = value + "%";
+        }
+      }
+    </script>
+  </body>
+</html>

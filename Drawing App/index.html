@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div class="toolbar">
+      <button onclick="toggleBrushSize()" class="i-btn">
+        <i class="fas fa-2x fa-paint-brush"></i>
+      </button>
+
+      <input
+        value="5"
+        type="range"
+        min="1"
+        max="20"
+        onchange="setBrushSize(this.value)"
+        class="brushSize hide"
+      />
+
+      <button class="i-btn" onclick="toggleColorsPalette()">
+        <i class="fas fa-2x fa-palette"></i>
+      </button>
+      <button onclick="toggleEraser()" class="i-btn">
+        <i class="fas fa-2x fa-eraser"></i>
+      </button>
+
+      <div class="colorsPalette hide">
+        <div class="colorSwatch" id="color-f44336"></div>
+        <div class="colorSwatch" id="color-e91e63"></div>
+        <div class="colorSwatch" id="color-9c27b0"></div>
+        <div class="colorSwatch" id="color-673ab7"></div>
+        <div class="colorSwatch" id="color-3f51b5"></div>
+        <div class="colorSwatch" id="color-03a9f4"></div>
+        <div class="colorSwatch" id="color-00bcd4"></div>
+        <div class="colorSwatch" id="color-009688"></div>
+        <div class="colorSwatch" id="color-4caf50"></div>
+        <div class="colorSwatch" id="color-8bc34a"></div>
+        <div class="colorSwatch" id="color-cddc39"></div>
+        <div class="colorSwatch" id="color-ffeb3b"></div>
+        <div class="colorSwatch" id="color-ffc107"></div>
+        <div class="colorSwatch" id="color-ff9800"></div>
+        <div class="colorSwatch" id="color-ff5722"></div>
+      </div>
+      <button onclick="clearCanvas()" class="i-btn">
+        <i class="fas fa-2x fa-ban"></i>
+      </button>
+      <button id="mode-btn" onclick="toggleDarkMode()" class="i-btn">
+        <i class="fas fa-2x fa-sun"></i>
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

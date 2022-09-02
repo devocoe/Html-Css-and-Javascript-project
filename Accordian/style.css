@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 500px;
+  min-width: 300px;
+  max-width: 70%;
+}
+
+.accordian {
+  background-color: #ced6e0;
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+  border-bottom: 1px solid whitesmoke;
+  user-select: none;
+}
+
+.accordian:hover {
+  background-color: #f1f2f6;
+}
+
+.accordian-content {
+  padding: 0 10px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  font-size: 14px;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+}
+
+.accordian-content p {
+  padding: 10px 0;
+}
+
+.accordian::after {
+  content: "+";
+}
+
+.active:after {
+  content: "-";
+}

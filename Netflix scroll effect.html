@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Scroll effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container{
+            width: 95%;
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        .container img{
+            margin: 10px;
+            transition: all .5s linear;
+            border-radius: 3px;
+        }
+
+
+        .container img:hover{
+            transform: scale(1.1);
+        }
+
+        .container::-webkit-scrollbar{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+        </div>
+    </div>
+
+
+    <script>
+
+        const container = document.querySelector('.container');
+        for (let index = 0; index < 20; index++) {
+            
+            let img = document.createElement('img');
+            img.src = `https://picsum.photos/300/160?random=${index}"`;
+            container.appendChild(img)
+            
+        }
+
+
+    </script>
+</body>
+</html>

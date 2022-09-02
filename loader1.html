@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ball loader</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      .main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .center {
+        width: 40rem;
+        height: 20rem;
+      }
+
+      .center ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1rem solid grey;
+      }
+
+      .center ul li {
+        /* transform: translateY(7rem); */
+        border-radius: 50%;
+        list-style: none;
+        width: 5rem;
+        height: 5rem;
+        background-color: rgb(12, 104, 185);
+        animation: bouncy 2s infinite;
+      }
+
+      @keyframes bouncy {
+        0% {
+          transform: translateY(7rem);
+        }
+        50% {
+          transform: translateY(0rem);
+        }
+        100% {
+          transform: translateY(7rem);
+        }
+      }
+
+      li:nth-child(1){
+        animation-delay: 0s;
+      }
+      li:nth-child(2){
+        animation-delay: 2s;
+      }
+      li:nth-child(3){
+        animation-delay: 4s;
+      }
+      li:nth-child(4){
+        animation-delay: 6s;
+      }
+      li:nth-child(5){
+        animation-delay: 8s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="center">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

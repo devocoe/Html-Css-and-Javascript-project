@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+            scroll-behavior: smooth;
+
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+
+        #first::before {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            background: url('https://source.unsplash.com/1600x650/?nature,sunrise');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 65rem;
+            width: 100%;
+            opacity: 0.8;
+        }
+
+        #first {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 65rem;
+            color: white;
+        }
+
+
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            font-size: 3rem;
+            padding: 1.5rem 2rem;
+            border: none;
+            outline: none;
+            border-radius: .3rem;
+            width: 40rem;
+            height: 7rem;
+            color: white;
+        }
+
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 30rem;
+            padding: 4rem 5rem;
+            text-align: center;
+            background-color: #2d3436;
+            color: white;
+        }
+
+
+        h1 {
+            font-size: 3rem;
+
+        }
+
+        h2 {
+            font-size: 3rem;
+
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        #third::before {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            background: url('https://source.unsplash.com/1600x450/?nature,forest,animals');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 45rem;
+            width: 100%;
+            opacity: 0.8;
+        }
+
+        #third {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 45rem;
+            font-size: 1.5rem;
+            padding: 0rem 5rem;
+            text-align: center;
+            color: white;
+        }
+
+
+        #white {
+            background-color: #ecf0f1;
+            color: #000000;
+        }
+
+
+
+        #fourth::before {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            background: url('https://source.unsplash.com/1600x650/?nature,bird,animals');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 65rem;
+            width: 100%;
+            opacity: 0.8;
+        }
+
+
+        #fourth {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 65rem;
+            color: white;
+        }
+
+        @media(max-width: 500px){
+            html{
+                font-size: 50%;
+            }
+
+            .btn{
+                width: 30rem;
+                font-size: 2.5rem;
+            }
+
+            .section{
+            height: 50rem;
+
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <section id="first">
+        <button class="btn">PARALLAX WEBSITE</button>
+    </section>
+    <section class="section">
+        <h1>Life is very sort do what ever you want</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad accusantium voluptate voluptatum eos sapiente
+            quidem? Soluta, dolores ipsa nesciunt ex autem perspiciatis, maxime, officiis voluptatum repellat eos
+            repudiandae veniam necessitatibus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
+            corporis eveniet earum dolorem minima dolore, rem facere impedit autem, sit fuga ea modi repellendus at,
+            temporibus in dolor? Quisquam aspernatur dignissimos quasi ipsa porro sint alias cum, voluptatum sequi
+            repudiandae culpa harum fugit necessitatibus pariatur similique vitae, ut excepturi omnis officia nemo.
+           </p>
+    </section>
+    <section id="third">
+        <h2>Once you choose hope, anything’s possible.</h2>
+    </section>
+    <section class="section" id="white">
+        <h1>Live Life</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad accusantium voluptate voluptatum eos sapiente
+            quidem? Soluta, dolores ipsa nesciunt ex autem perspiciatis, maxime, officiis voluptatum repellat eos
+            repudiandae veniam necessitatibus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
+            corporis eveniet earum dolorem minima dolore, rem facere impedit autem, sit fuga ea modi repellendus at,
+            temporibus in dolor? Quisquam aspernatur dignissimos quasi ipsa porro sint alias cum, voluptatum sequi
+            repudiandae culpa harum fugit necessitatibus pariatur similique vitae, ut excepturi omnis officia nemo.
+            .</p>
+    </section>
+    <section id="fourth">
+        <button class="btn">Thanks for coming</button>
+    </section>
+</body>
+
+</html>

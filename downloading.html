@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading animation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #percentage {
+            text-align: center;
+            margin: 10px;
+        }
+
+        #btn {
+            width: 130px;
+            height: 35px;
+            font-size: 18px;
+            background-color: #78e08f;
+            color: white;
+            border: 0;
+            text-align: center;
+
+        }
+
+        .progbar {
+            width: 500px;
+            height: 30px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #indiv {
+            width: 0%;
+            background-color: #eb2f06;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="child">
+            <button id="btn" onclick="download()">Download</button>
+            <div class="progbar">
+                <div id="indiv"></div>
+            </div>
+            <div id="percentage"">0%</div>
+        </div>
+    </div>
+    <script>
+
+        function download() {
+            let btn = document.getElementById('btn');
+            btn.innerText = 'Downloading';
+            let per = document.getElementById('percentage');
+            let indiv = document.getElementById('indiv');
+            var i = 0;
+            indiv.style.animation = 'load 5.2s 1';
+            let int = setInterval(() => {
+                per.innerText = i + "%"; i++; if (i > 100) {
+                    btn.innerText = 'Downloaded'
+                    indiv.style.animationPlayState = 'paused'
+                    indiv.style.backgroundColor = '#2ecc71'
+                    clearInterval(int)
+                }
+            }, 50);
+        }
+    </script>
+</body>
+
+</html>

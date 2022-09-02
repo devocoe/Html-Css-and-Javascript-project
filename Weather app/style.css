@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  position: relative;
+  background-color: #ffffff;
+  width: 25%;
+  height: 85%;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  color: black;
+  z-index: -2;
+}
+
+/* icon */
+
+#icon {
+  width: 100px;
+  height: 100px;
+  margin: 0px auto;
+  display: block;
+}
+
+/* city name */
+#name {
+  padding: 3px;
+  display: block;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#datetime {
+  text-align: center;
+  padding: 3px;
+  font-size: 1.2rem;
+}
+
+/* main weather */
+
+#weatherdescribe {
+  padding: 3px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* temprature */
+#temp {
+  padding: 3px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* humidity */
+#humidity {
+  padding: 3px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* windspeed */
+#windspeed {
+  padding: 3px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.wavediv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+#wave1 {
+  position: absolute;
+  top: 40%;
+  border-radius: 50%;
+  width: 500px;
+  height: 450px;
+  background-color: #48dbfb;
+  animation: rot 2s infinite linear;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#wave2 {
+  position: absolute;
+  top: 40%;
+  border-radius: 50%;
+  width: 500px;
+  height: 450px;
+  background-color: #48dbfb;
+  animation: rot 2s infinite;
+  opacity: 0.5;
+  /* right: 50px; */
+  z-index: -1;
+}
+
+#wave3 {
+  position: absolute;
+  top: 40%;
+  border-radius: 50%;
+  width: 500px;
+  height: 450px;
+  background-color: #0abde3;
+  animation: rot 2s infinite;
+  opacity: 0.5;
+  /* left: 50px; */
+  z-index: -1;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#boat {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: auto;
+  animation: move 2s linear infinite alternate;
+}
+
+.weatherinfo {
+  position: relative;
+  top: 20%;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}

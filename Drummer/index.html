@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drummer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+
+        button {
+            border: none;
+            outline: none;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .active{
+            transform: scale(1.2);
+        }
+
+        h1{
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Drummer</h1>
+    <div class="container">
+
+        <div class="row">
+            <button><img src="images/tom1.png" alt="" id="a"></button>
+            <button><img src="images/tom2.png" alt="" id="s"></button>
+        </div>
+        <div class="row">
+            <button><img src="images/tom3.png" alt="" id="d"></button>
+            <button><img src="images/tom4.png" alt="" id="f"></button>
+        </div>
+        <div class="row">
+            <button><img src="images/snare.png" alt="" id="g"></button>
+            <button><img src="images/kick.png" alt="" id="h"></button>
+            <button><img src="images/crash.png" alt="" id="j"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

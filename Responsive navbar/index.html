@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui;
+      }
+      body {
+        overflow: hidden;
+      }
+      .navbar {
+        background-color: #111;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 50px;
+      }
+      .logo {
+        font-size: 22px;
+        user-select: none;
+      }
+      .hambtn {
+        font-size: 22px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .dropdown {
+        background-color: #111;
+        height: 0px;
+        width: 200px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        transition: all 800ms ease-in-out;
+      }
+      .dropdown-menu {
+        margin-top: 80px;
+        text-align: center;
+        position: relative;
+      }
+      .dropdown-menu a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        transition: all 1s;
+      }
+      .dropdown-menu .closebtn {
+        color: #fff;
+        position: absolute;
+        right: 50px;
+        font-size: 22px;
+        cursor: pointer;
+        user-select: none;
+        top: -65px;
+        display: none;
+        transition: all 500ms;
+      }
+      .container {
+        padding: 3% 4%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Renteria</div>
+      <div class="hambtn" onclick="openDropdownMenu()">&#9776;</div>
+    </nav>
+    <div class="dropdown">
+      <div class="dropdown-menu">
+        <div class="closebtn" onclick="closeDropdownMenu()">&#10006;</div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">contact</a>
+        <a href="#">services</a>
+      </div>
+    </div>
+    <main class="container">
+      <h1>Welcome to Renteria</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro eligendi
+        cumque vero!
+      </p>
+    </main>
+
+    <script>
+      const dropdown = document.querySelector(".dropdown");
+      const closebtn = document.querySelector(".closebtn");
+      const hambtn = document.querySelector(".hambtn");
+
+      const closeDropdownMenu = () => {
+        dropdown.style.height = "0px";
+        closebtn.style.display = "none";
+        hambtn.style.display = "block";
+      };
+      const openDropdownMenu = () => {
+        dropdown.style.height = "280px";
+        closebtn.style.display = "block";
+        hambtn.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

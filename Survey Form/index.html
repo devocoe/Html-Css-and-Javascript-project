@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+
+        html {
+            font-size: 62.5%;
+        }
+
+
+
+        body {
+            background: url('bg.jpg')no-repeat center center/cover;
+            scroll-behavior: smooth;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 55rem;
+            background-color: #3b3b987d;
+            margin: 5rem auto;
+            padding: 2rem;
+            color: white;
+        }
+
+        form {
+            width: 90%;
+            margin: auto;
+        }
+
+        .inputtag {
+            display: flex;
+            flex-direction: column;
+            text-transform: capitalize;
+            margin: 2rem 0rem;
+            font-size: 1.4rem;
+        }
+
+        input {
+            padding: .5rem;
+        }
+
+        select {
+            font-size: 1.4rem;
+            padding: .3rem;
+        }
+
+        label {
+            margin: .5rem 0rem;
+            font-size: 1.4rem;
+        }
+
+        textarea {
+            padding: 1rem;
+            resize: none;
+        }
+
+
+        header {
+            text-align: center;
+            margin: 5rem auto;
+            text-transform: capitalize;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+
+
+        .btn {
+            background-color: red;
+            padding: .5rem 2rem;
+            outline: none;
+            border: none;
+            border-radius: .3rem;
+            color: white;
+        }
+
+        button[type='submit'] {
+            background-color: #2ecc71;
+        }
+
+        @media (max-width: 700px) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            html {
+                font-size: 40%;
+            }
+        }
+
+        @media (max-width: 300px) {
+            html {
+                font-size: 30%;
+            }
+        }
+
+        @media (max-width: 150px) {
+            html {
+                font-size: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to servey form of icoders</h1>
+        <p>We will make you a good developer</p>
+    </header>
+
+    <div class="container">
+        <form action="#">
+
+            <div class="inputtag">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+            </div>
+
+            <div class="inputtag">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+            </div>
+
+
+            <div class="inputtag">
+                <label for="age">Age (optional)</label>
+                <input type="number" placeholder="Enter Your Age" name="age">
+            </div>
+
+            <div class="inputtag">
+                <label for="occupation">Occupation</label>
+                <select name="occupation" id="">
+                    <option value="frontend developer">Frontend developer</option>
+                    <option value="backend developer">Backend developer</option>
+                    <option value="fullstack developer">Fullstack developer</option>
+                </select>
+            </div>
+
+            <div class="inputtag">
+                <label for="refer">Do you refer you friends</label>
+                <div>Yes sure <input type="radio" name="refer" id=""></div>
+                <div>Not i'm not intrested <input type="radio" name="refer" id=""></div>
+                <div>May be later <input type="radio" name="refer" id=""></div>
+            </div>
+
+            <div class="inputtag">
+                <label for="refer">What do you like most in our platform</label>
+                <div><input type="checkbox" name="" id=""> Challenges</div>
+                <div><input type="checkbox" name="" id=""> Practice set</div>
+                <div><input type="checkbox" name="" id=""> Projects ideas</div>
+                <div><input type="checkbox" name="" id=""> Tutorials</div>
+                <div><input type="checkbox" name="" id=""> Nothing</div>
+            </div>
+
+            <div class="inputtag">
+                <label for="other">Say Something else</label>
+                <textarea name="other" id="" cols="30" rows="3" placeholder="Tell About Your Self"></textarea>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+            <button class="btn" type="reset">Reset</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
